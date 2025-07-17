@@ -14,7 +14,7 @@
 <meta property="og:description" content="此文章仅简要记录搭建博客的流程因在本人电脑（windows）上没有问题，所以针对不兼容的问题，不会给出问题的解决方案，请自行百度基本上是从b站 卷二兔 那里学的，想看完整视频流程的请移步 1.环境配置  git &amp; nodejs &amp; npm  a.安装git在任意文件夹，建议在C或硬盘中，主要使用其中的 git bash，也可以在下载后右键目标文件夹位置打开。安装后用git --v">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-07-15T13:00:21.000Z">
-<meta property="article:modified_time" content="2025-07-15T13:56:22.898Z">
+<meta property="article:modified_time" content="2025-07-17T02:21:56.010Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -127,6 +127,16 @@
 <p>在博客用文件夹（<strong>F</strong>）里用bash输入<code>git config --global user.name &#39;你的用户名&#39;</code>，回车后再输入<code>git config --global user.email &#39;你的注册邮箱&#39;</code>，注意这两个信息都是你注册github时使用的</p>
 </blockquote>
 <blockquote>
+<p>再检查是否有ssh密钥<code>cd ~/.ssh</code>，若没有，建立<code>ssh-keygen -t rsa -C &#39;你的邮箱&#39;</code>，获取内容<code>cd ~/.ssh</code>再<code>cat id_rsa.pub</code>复制包含ssh-key的所有内容上传至github个人设置的ssh密钥页面</p>
+</blockquote>
+<blockquote>
+<p>之后检查连接情况<code>ssh -T git@github.com</code>请在C盘\你的电脑名称\.ssh文件夹创建一个config文件（无后缀），输入以下内容</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>然后再检查连接情况直到出现连接成功提示<code>You&#39;ve successfully authenticated, but GitHub does not provide shell access. </code></p>
+</blockquote>
+<blockquote>
 <p>用vscode等代码软件打开文件夹<strong>F</strong>，在_config.yml中的最下方进行更改。注意缩进已经是2个普通空格，否则极容易报错，该文件中其他内容也是如此。</p>
 </blockquote>
 <p>原来应该是：</p>
@@ -143,11 +153,15 @@
 <blockquote>
 <p>打开github的博客的repository上方的Settings齿轮图标，在左侧列中下方找Pages点击，Source选Deploy from a branch，下方branch选main，等待几秒（或几分钟），出现<code>Your site is live at 某网页</code>即上传成功，点击即可进入博客</p>
 </blockquote>
+<p><strong>使用提示</strong></p>
+<blockquote>
+<p>每次创建新的文件夹时需要进行：<br><code>hexo init</code><br><code>hexo g</code><br><code>git config --global user.name和email &#39;xxx&#39;</code><br><code>npm install hexo-deployer-git --save</code><br><code>hexo clean</code><br><code>hexo d</code><br>创建新blog请用<code>hexo new 名称</code></p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/" data-id="cmd4lj08k0001gco4cz9rgw7b" data-title="如何使用github搭建一个博客——个人记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/" data-id="cmd6stdzu0002bwo4g42w0e9z" data-title="如何使用github搭建一个博客——个人记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -156,6 +170,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          精力管理：第一章--你一定要全情投入
+        
+      </div>
+    </a>
   
   
     <a href="/2025/07/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -196,6 +219,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/">精力管理：第一章--你一定要全情投入</a>
+          </li>
         
           <li>
             <a href="/2025/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/">如何使用github搭建一个博客——个人记录</a>
