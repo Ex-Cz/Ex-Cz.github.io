@@ -71,6 +71,112 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-1-1命题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/07/18/1-1%E5%91%BD%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2025-07-18T07:30:06.000Z" itemprop="datePublished">2025-07-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/07/18/1-1%E5%91%BD%E9%A2%98/">1.1命题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>命题逻辑中常用的符号可以通过LaTeX表示：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 常用逻辑符号</span></span><br><span class="line"><span class="keyword">\neg</span> p   <span class="comment">% 否定（非）</span></span><br><span class="line">p <span class="keyword">\land</span> q   <span class="comment">% 合取（与）</span></span><br><span class="line">p <span class="keyword">\lor</span> q   <span class="comment">% 析取（或）</span></span><br><span class="line">p <span class="keyword">\rightarrow</span> q   <span class="comment">% 蕴含（如果...那么）</span></span><br><span class="line">p <span class="keyword">\leftrightarrow</span> q   <span class="comment">% 双向蕴含（当且仅当）</span></span><br><span class="line"><span class="keyword">\forall</span> x   <span class="comment">% 全称量词（对所有的）</span></span><br><span class="line"><span class="keyword">\exists</span> x   <span class="comment">% 存在量词（存在）</span></span><br><span class="line"><span class="keyword">\top</span>   <span class="comment">% 恒真式</span></span><br><span class="line"><span class="keyword">\bot</span>   <span class="comment">% 矛盾式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这些符号在数学模式中使用，例如：</p>
+<p>$$<br>p \land q \rightarrow \neg r<br>$$</p>
+<p>$$<br>\forall x \exists y (P(x) \rightarrow Q(y))<br>$$</p>
+<p>在命题逻辑中，我们可以定义以下基本概念：</p>
+<ul>
+<li>**命题(Proposition)**：一个具有确定真值（真或假）的陈述句。</li>
+<li>**联结词(Connectives)**：用于连接简单命题形成复合命题的逻辑符号。</li>
+<li>**真值表(Truth Table)**：展示复合命题在所有可能情况下的真值。</li>
+</ul>
+<h1 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h1><h3 id="与："><a href="#与：" class="headerlink" title="与："></a>与：</h3><p>$$<br>与：\land<br>$$</p>
+<p>$$<br>当p和q同为真，则 p \land q \rightarrow T<br>$$</p>
+<p>$$<br>否则，p \land q \rightarrow F<br>$$</p>
+<h3 id="或："><a href="#或：" class="headerlink" title="或："></a>或：</h3><p>$$<br>或：\lor<br>$$</p>
+<p>$$<br>当p和q中至少有一个为真，则p \lor q \rightarrow T<br>$$</p>
+<p>$$<br>否则，p \lor q \rightarrow F<br>$$</p>
+<h1 id="运算律："><a href="#运算律：" class="headerlink" title="运算律："></a>运算律：</h1><h3 id="与交换律"><a href="#与交换律" class="headerlink" title="与交换律"></a>与交换律</h3><p>$$<br>p \land (q \land r) \leftrightarrow (p \land q) \land r<br>$$</p>
+<p>证明：</p>
+<p>$$<br>p \land (q \land r) \leftrightarrow T 当且仅当 p，q，r同为真时成立，右侧同理<br>$$</p>
+<h3 id="或交换律"><a href="#或交换律" class="headerlink" title="或交换律"></a>或交换律</h3><p>$$<br>p \lor (q \lor r) \leftrightarrow (p \lor q) \lor r<br>$$</p>
+<p>证明：</p>
+<p>$$<br>p \lor (q \lor r) \leftrightarrow F 当且仅当p，q，r同为假时成立，右侧同理<br>$$</p>
+<h3 id="恒等律（单位元）"><a href="#恒等律（单位元）" class="headerlink" title="恒等律（单位元）"></a>恒等律（单位元）</h3><p>$$<br>p \land T \leftrightarrow p<br>$$</p>
+<p>$$<br>p \lor F \leftrightarrow p<br>$$</p>
+<h3 id="支配律"><a href="#支配律" class="headerlink" title="支配律"></a>支配律</h3><p>$$<br>p \lor T \leftrightarrow T<br>$$</p>
+<p>$$<br>p \land F \leftrightarrow F<br>$$</p>
+<h3 id="幂等律"><a href="#幂等律" class="headerlink" title="幂等律"></a>幂等律</h3><p>$$<br>p \lor p \leftrightarrow p<br>$$</p>
+<p>$$<br>p \land p \leftrightarrow p<br>$$</p>
+<h3 id="否定律"><a href="#否定律" class="headerlink" title="否定律"></a>否定律</h3><p>$$<br>p \lor (\neg p) \leftrightarrow T<br>$$</p>
+<p>$$<br>p \land (\neg p) \leftrightarrow F<br>$$</p>
+<h3 id="分配律"><a href="#分配律" class="headerlink" title="分配律"></a>分配律</h3><p>$$<br>p \land (q \lor r) \leftrightarrow (p \land q) \lor (p \land r)<br>$$</p>
+<p>$$<br>称为\land 对 \lor 有分配律，类比*对+有分配律<br>$$</p>
+<p>$$<br>同理，p \lor (q \land r) \leftrightarrow (p \lor q) \land (p \lor r)<br>$$</p>
+<p>$$<br>\lor 对 \land 也有分配律<br>$$</p>
+<p>推广</p>
+<p>$$<br>\left(\bigwedge_{i&#x3D;1}^{n} p_i\right) \vee \left(\bigwedge_{j&#x3D;1}^{m} q_j\right) \leftrightarrow \bigwedge_{\substack{i&#x3D;1,\ldots,n \ j&#x3D;1,\ldots,m}} (p_i \vee q_j)<br>$$</p>
+<h3 id="de-Morgan律"><a href="#de-Morgan律" class="headerlink" title="de Morgan律"></a>de Morgan律</h3><p>$$<br>\neg (p \land q) \leftrightarrow (\neg p) \lor (\neg q)<br>$$</p>
+<p>$$<br>\neg (p \lor q) \leftrightarrow (\neg p)\land(\neg q)<br>$$</p>
+<p>证明：</p>
+<p>上方，p与q为F 等价于 pq不同为T，即p为F或q为F</p>
+<p>下方，p或q为F 等价于 pq同为F</p>
+<p>启发：对于所有有关与或的定律，一定有或与的定律。所有与或对称的定律，只用证一边</p>
+<p>用de Morgan律证明分配律:</p>
+<p>$$<br>\begin{align} \neg （p \lor (q \land r))  &amp;\leftrightarrow (\neg p) \land (\neg (q \land r)) \ &amp;\leftrightarrow (\neg p) \land ((\neg q) \lor (\neg r) )\  &amp;\leftrightarrow ((\neg p) \land (\neg q)) \lor ((\neg p) \land (\neg r)) \ &amp;\leftrightarrow (\neg (p \lor q)) \lor (\neg( p\lor r)) \  &amp;\leftrightarrow \neg((p \lor q) \land (p \lor r)) \end{align}<br>$$</p>
+<h3 id="吸收律"><a href="#吸收律" class="headerlink" title="吸收律"></a>吸收律</h3><p>$$<br>\begin{cases}<br>A \vee (A \wedge B) \equiv A \<br>A \wedge (A \vee B) \equiv A<br>\end{cases}<br>$$</p>
+<p>证明：分类讨论A的真假即可</p>
+<hr>
+<h1 id="蕴含（推出）：若p则q"><a href="#蕴含（推出）：若p则q" class="headerlink" title="蕴含（推出）：若p则q"></a>蕴含（推出）：若p则q</h1><p>$$<br>p \rightarrow q<br>$$</p>
+<p>$$<br>当且仅当p \nrightarrow q \leftrightarrow p&#x3D;T , q&#x3D;F<br>$$</p>
+<p>假命题可以推出任何命题</p>
+<p>$$<br>\begin{align} p \nrightarrow q &amp;\leftrightarrow p&#x3D;T,q&#x3D;F \&amp;\leftrightarrow \neg (p \rightarrow q) \&amp;\leftrightarrow p \land (\neg q) \end{align}<br>$$</p>
+<p>对(7)和(8)使用de Morgan律，称为</p>
+<h3 id="推出律"><a href="#推出律" class="headerlink" title="推出律"></a>推出律</h3><p>$$<br>(p \rightarrow q) \leftrightarrow (\neg p) \lor q<br>$$</p>
+<p>虚真命题：假命题推出的永远真的命题</p>
+<p>永真命题：无论子命题是真是假，该命题总是为真</p>
+<h3 id="逆否命题律"><a href="#逆否命题律" class="headerlink" title="逆否命题律"></a>逆否命题律</h3><p>$$<br>(p \rightarrow q) \leftrightarrow (\neg q \rightarrow \neg p)<br>$$</p>
+<p>证明</p>
+<p>$$<br>\begin{align} (p \rightarrow q) &amp;\leftrightarrow \neg p \lor q \&amp;\leftrightarrow q \lor \neg p \&amp;\leftrightarrow \neg (\neg q) \lor \neg p \&amp;\leftrightarrow (\neg q \rightarrow \neg p) \end{align}<br>$$</p>
+<h3 id="混合蕴含律"><a href="#混合蕴含律" class="headerlink" title="混合蕴含律"></a>混合蕴含律</h3><p>$$<br>(p \rightarrow q) \lor (p \rightarrow r) \leftrightarrow (p \rightarrow (q \lor r))<br>$$</p>
+<p>$$<br>(p \rightarrow q) \land (p \rightarrow r) \leftrightarrow (p \rightarrow (q \land r))<br>$$</p>
+<p>$$<br>(p \rightarrow r) \lor (q \rightarrow r) \leftrightarrow ((p \land q) \rightarrow r)<br>$$</p>
+<p>$$<br>(p \rightarrow r) \land (q \rightarrow r) \leftrightarrow ((p \lor q) \rightarrow r)<br>$$</p>
+<p>$$<br>(p \rightarrow (q \rightarrow r)) \leftrightarrow ((p \land q) \rightarrow r)<br>$$</p>
+<h2 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h2><p>1.要证明p→q等各种命题，假设p成立，看能否推出q</p>
+<p>2.要证明pq中至少一个成立，假设p不成立推q，或q不成立推p</p>
+<p>$$<br>p \lor q\leftrightarrow (\neg p \rightarrow q) \leftrightarrow (\neg q \rightarrow p)<br>$$</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/07/18/1-1%E5%91%BD%E9%A2%98/" data-id="cmd8i76ik0000sko46gi6ews5" data-title="1.1命题" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-20250717精力管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/" class="article-date">
@@ -124,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/" data-id="cmd6stdzr0000bwo48e2ia0h7" data-title="精力管理：第一章--你一定要全情投入" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/" data-id="cmd8i76ir0003sko4gnyqckfp" data-title="精力管理：第一章--你一定要全情投入" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -224,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/" data-id="cmd6stdzu0002bwo4g42w0e9z" data-title="如何使用github搭建一个博客——个人记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/07/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/" data-id="cmd8i76ir0002sko475h74asl" data-title="如何使用github搭建一个博客——个人记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -275,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/07/15/hello-world/" data-id="cmd6stdzt0001bwo4g36qbrej" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/07/15/hello-world/" data-id="cmd8i76im0001sko44wla9bj8" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -316,6 +422,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2025/07/18/1-1%E5%91%BD%E9%A2%98/">1.1命题</a>
+          </li>
         
           <li>
             <a href="/2025/07/17/20250717%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/">精力管理：第一章--你一定要全情投入</a>
